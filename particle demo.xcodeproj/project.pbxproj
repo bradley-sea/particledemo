@@ -24,6 +24,10 @@
 		A20A297D19232D9D00E96F64 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20A295819232D9D00E96F64 /* UIKit.framework */; };
 		A20A298519232D9D00E96F64 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A20A298319232D9D00E96F64 /* InfoPlist.strings */; };
 		A20A298719232D9D00E96F64 /* particle_demoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A298619232D9D00E96F64 /* particle_demoTests.m */; };
+		A20A299219232E7000E96F64 /* Stars.sks in Resources */ = {isa = PBXBuildFile; fileRef = A20A299019232E7000E96F64 /* Stars.sks */; };
+		A20A299319232E7000E96F64 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = A20A299119232E7000E96F64 /* spark.png */; };
+		A20A299519232F2300E96F64 /* Exhaust.sks in Resources */ = {isa = PBXBuildFile; fileRef = A20A299419232F2300E96F64 /* Exhaust.sks */; };
+		A26237F41923CB6000A84D01 /* laser.sks in Resources */ = {isa = PBXBuildFile; fileRef = A26237F31923CB6000A84D01 /* laser.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,10 @@
 		A20A298219232D9D00E96F64 /* particle demoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "particle demoTests-Info.plist"; sourceTree = "<group>"; };
 		A20A298419232D9D00E96F64 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A20A298619232D9D00E96F64 /* particle_demoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = particle_demoTests.m; sourceTree = "<group>"; };
+		A20A299019232E7000E96F64 /* Stars.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Stars.sks; sourceTree = "<group>"; };
+		A20A299119232E7000E96F64 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		A20A299419232F2300E96F64 /* Exhaust.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Exhaust.sks; sourceTree = "<group>"; };
+		A26237F31923CB6000A84D01 /* laser.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = laser.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +136,10 @@
 				A20A296C19232D9D00E96F64 /* ViewController.m */,
 				A20A296E19232D9D00E96F64 /* MyScene.h */,
 				A20A296F19232D9D00E96F64 /* MyScene.m */,
+				A26237F31923CB6000A84D01 /* laser.sks */,
+				A20A299019232E7000E96F64 /* Stars.sks */,
+				A20A299419232F2300E96F64 /* Exhaust.sks */,
+				A20A299119232E7000E96F64 /* spark.png */,
 				A20A297119232D9D00E96F64 /* Spaceship.png */,
 				A20A297319232D9D00E96F64 /* Images.xcassets */,
 				A20A295D19232D9D00E96F64 /* Supporting Files */,
@@ -240,10 +252,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A20A299219232E7000E96F64 /* Stars.sks in Resources */,
+				A20A299319232E7000E96F64 /* spark.png in Resources */,
 				A20A296119232D9D00E96F64 /* InfoPlist.strings in Resources */,
 				A20A297419232D9D00E96F64 /* Images.xcassets in Resources */,
 				A20A297219232D9D00E96F64 /* Spaceship.png in Resources */,
+				A20A299519232F2300E96F64 /* Exhaust.sks in Resources */,
 				A20A296A19232D9D00E96F64 /* Main.storyboard in Resources */,
+				A26237F41923CB6000A84D01 /* laser.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +488,7 @@
 				A20A298C19232D9D00E96F64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A20A298D19232D9D00E96F64 /* Build configuration list for PBXNativeTarget "particle demoTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +497,7 @@
 				A20A298F19232D9D00E96F64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
