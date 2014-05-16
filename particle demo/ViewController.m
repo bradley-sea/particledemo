@@ -21,6 +21,8 @@
     skView.showsNodeCount = YES;
     
     NSLog(@"logging one");
+    NSLog(@"longging two");
+    
     
     
     // Create and configure the scene.
