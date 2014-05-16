@@ -11,6 +11,7 @@
 @interface MyScene ()
 
 @property (strong,nonatomic) CMMotionManager *motionManager;
+@property (strong,nonatomic) SKSpriteNode *spaceShip;
 
 @end
 
@@ -24,10 +25,10 @@
         
         self.backgroundColor = [SKColor colorWithRed:0 green:0 blue:0 alpha:1.0];
         
-          SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
+         self.spaceShip = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
         
-        sprite.position = CGPointMake(160, 100);
-        sprite.size = CGSizeMake(100, 100);
+        self.spaceShip.position = CGPointMake(160, 100);
+        self.spaceShip.size = CGSizeMake(100, 100);
         
         
         NSString *starsPath =
@@ -38,7 +39,7 @@
         stars.position = CGPointMake(160, 560);
         
         [self addChild:stars];
-        [self addChild:sprite];
+        [self addChild:self.spaceShip];
         
         NSString *exhaustPath =
         [[NSBundle mainBundle] pathForResource:@"Exhaust" ofType:@"sks"];
@@ -46,7 +47,7 @@
         SKEmitterNode *exhaust = [NSKeyedUnarchiver unarchiveObjectWithFile:exhaustPath];
         exhaust.position = CGPointMake(0, -50);
         
-        [sprite addChild:exhaust];
+        [self.spaceShip addChild:exhaust];
         
         
         self.motionManager = [[CMMotionManager alloc] init];
@@ -60,7 +61,7 @@
                 
                 NSLog(@"%f",accelerometerData.acceleration.x);
                 
-                sprite.position = CGPointMake(sprite.position.x + (accelerometerData.acceleration.x * 3), sprite.position.y);
+                self.spaceShip.position = CGPointMake(self.spaceShip.position.x + (accelerometerData.acceleration.x * 3), self.spaceShip.position.y);
                 
                 //self.physicsWorld.gravity =  CGVectorMake(accelerometerData.acceleration.x * 5, -5);
                 
@@ -82,15 +83,17 @@
     /* Called when a touch begins */
     
     for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
         
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
         
-        sprite.position = location;
+        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"laserbeam_blue"];
         
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
+        sprite.position = CGPointMake(self.spaceShip.position.x, self.spaceShip.position.y + 50);
         
-        [sprite runAction:[SKAction repeatActionForever:action]];
+        
+        
+        SKAction *action = [SKAction moveTo:CGPointMake(sprite.position.x, 600) duration:1];
+        
+        [sprite runAction:action];
         
         [self addChild:sprite];
     }
